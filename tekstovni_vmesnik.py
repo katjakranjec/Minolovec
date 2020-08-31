@@ -74,7 +74,6 @@ def zazeni_igro():
             izpis_zmage()
             break
         
-
 zazeni_igro()
 
 

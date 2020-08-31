@@ -56,7 +56,6 @@ def pokazi_igro():
                             stanje=stanje,
                             igra=igra)
 
-
 @bottle.post('/igra/')
 def odpiraj():
     id_igre = int(bottle.request.get_cookie('idigre', secret=SKRIVNOST).split('e')[1])

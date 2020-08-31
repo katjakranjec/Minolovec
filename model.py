@@ -166,7 +166,6 @@ class Polje:
                         RESITEV[vrstica][stolpec] += 1
         return RESITEV
 
-
 def novo_polje(stopnja):
     return Polje(int(stopnja[0]), int(stopnja[1]))
 
