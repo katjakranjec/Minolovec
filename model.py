@@ -95,22 +95,30 @@ class Igra:
         return RESITEV
         
     def izid(self, poteza):
-        if len(poteza) == 2:
-            vrstica = int(poteza[0])
-            stolpec = int(poteza[1])
-            self.odpiranje(vrstica, stolpec)
-            if self.zmaga():
-                return "ZMAGA"
-            elif self.eksplozija(poteza):
-                return "PORAZ"
+        if poteza[0] in '1234567890' and poteza[1] in '1234567890':
+            if int(poteza[0]) in range(self.velikost_mreze) and int(poteza[1]) in range(self.velikost_mreze):
+                if len(poteza) == 2:
+                    vrstica = int(poteza[0])
+                    stolpec = int(poteza[1])
+                    self.odpiranje(vrstica, stolpec)
+                    if self.zmaga():
+                        return "ZMAGA"
+                    elif self.eksplozija(poteza):
+                        return "PORAZ"
+                    else:
+                        return "NEDOKONČANO"
+                elif len(poteza) == 3 and (poteza[2] == 'f' or poteza[2] == 'F'):
+                    self.postavljanje_in_odstranjevanje_zastavic(poteza)
+                    if self.zmaga():
+                        return "ZMAGA"
+                    else:
+                        return "NEDOKONČANO"
+                else:
+                    return "NAPAKA"
             else:
-                return "NEDOKONČANO"
-        elif len(poteza) == 3:
-            self.postavljanje_in_odstranjevanje_zastavic(poteza)
-            if self.zmaga():
-                return "ZMAGA"
-            else:
-                return "NEDOKONČANO"
+                return "NAPAKA"
+        else:
+            return "NAPAKA"
     
 class Polje:
 
@@ -226,4 +234,4 @@ def statistika(datoteka_s_stanjem):
     stevilo_nedokoncnih_iger = stevilo_iger - stevilo_zmag - stevilo_porazov
     slovar_statistik["odstotek_nedokoncanih_iger"] = odstotek(stevilo_nedokoncnih_iger, stevilo_iger)
 
-    return slovar_statistik       
+    return slovar_statistik
