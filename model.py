@@ -95,8 +95,8 @@ class Igra:
         return RESITEV
         
     def izid(self, poteza):
-        if poteza[0] in '1234567890' and poteza[1] in '1234567890':
-            if int(poteza[0]) in range(self.velikost_mreze) and int(poteza[1]) in range(self.velikost_mreze):
+        if len(poteza[0]) == 1 and poteza[0] in '1234567890' and len(poteza[1]) == 1 and poteza[1] in '1234567890':
+            if (int(poteza[0]) in range(self.velikost_mreze)) and (int(poteza[1]) in range(self.velikost_mreze)):
                 if len(poteza) == 2:
                     vrstica = int(poteza[0])
                     stolpec = int(poteza[1])
