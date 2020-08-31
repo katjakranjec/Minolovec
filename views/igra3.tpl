@@ -5,10 +5,38 @@
 
 % if stanje == "ZMAGA":
 
-<h1>ZMAGA 😀</h1>
+
 
 <table>
     <tr>
+        <th>
+        </th>
+        <th>
+            <h2>0</h2>
+        </th>
+        <th>
+            <h2>1</h2>
+        </th>
+        <th>
+            <h2>2</h2>
+        </th>
+        <th>
+            <h2>3</h2>
+        </th>
+        <th>
+            <h2>4</h2>
+        </th>
+        <th>
+            <h2>5</h2>
+        </th>
+        <th>
+            <h2>6</h2>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <h2>0</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[0][0]}}</h2>
         </td>
@@ -32,6 +60,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+        <h2>1</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[1][0]}}</h2>
         </td>
@@ -55,6 +86,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>2</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[2][0]}}</h2>
         </td>
@@ -78,6 +112,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>3</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[3][0]}}</h2>
         </td>
@@ -101,6 +138,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>4</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[4][0]}}</h2>
         </td>
@@ -124,6 +164,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>5</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[5][0]}}</h2>
         </td>
@@ -147,6 +190,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>6</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[6][0]}}</h2>
         </td>
@@ -170,17 +216,51 @@
         </td>
     </tr>
     </table>
+
+<h1>ZMAGA 😀</h1>
 
 <form action="/izbira_tezavnosti/" method="post">
     <button type="submit">Nova igra</button>
 </form>
+<br>
+<form action="/statistika/" method="get">
+    <button type="submit">Ogled statistike preteklih iger</button>
+</form>
 
 % elif stanje == "PORAZ":
 
-<h1>PORAZ 🙁</h1>
+
 
 <table>
     <tr>
+        <th>
+        </th>
+        <th>
+            <h2>0</h2>
+        </th>
+        <th>
+            <h2>1</h2>
+        </th>
+        <th>
+            <h2>2</h2>
+        </th>
+        <th>
+            <h2>3</h2>
+        </th>
+        <th>
+            <h2>4</h2>
+        </th>
+        <th>
+            <h2>5</h2>
+        </th>
+        <th>
+            <h2>6</h2>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <h2>0</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[0][0]}}</h2>
         </td>
@@ -204,6 +284,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+        <h2>1</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[1][0]}}</h2>
         </td>
@@ -227,6 +310,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>2</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[2][0]}}</h2>
         </td>
@@ -250,6 +336,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>3</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[3][0]}}</h2>
         </td>
@@ -273,6 +362,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>4</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[4][0]}}</h2>
         </td>
@@ -296,6 +388,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>5</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[5][0]}}</h2>
         </td>
@@ -319,6 +414,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>6</h2>
+        </th>
         <td>
             <h2>{{igra.resitev[6][0]}}</h2>
         </td>
@@ -343,14 +441,48 @@
     </tr>
     </table>
 
+<h1>PORAZ 🙁</h1>
+
 <form action="/izbira_tezavnosti/" method="post">
     <button type="submit">Nova igra</button>
+</form>
+<br>
+<form action="/statistika/" method="get">
+    <button type="submit">Ogled statistike preteklih iger</button>
 </form>
 
 % else:
 
 <table>
     <tr>
+        <th>
+        </th>
+        <th>
+            <h2>0</h2>
+        </th>
+        <th>
+            <h2>1</h2>
+        </th>
+        <th>
+            <h2>2</h2>
+        </th>
+        <th>
+            <h2>3</h2>
+        </th>
+        <th>
+            <h2>4</h2>
+        </th>
+        <th>
+            <h2>5</h2>
+        </th>
+        <th>
+            <h2>6</h2>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <h2>0</h2>
+        </th>
         <td>
             <h2>{{polje[0][0]}}</h2>
         </td>
@@ -374,6 +506,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+        <h2>1</h2>
+        </th>
         <td>
             <h2>{{polje[1][0]}}</h2>
         </td>
@@ -397,6 +532,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>2</h2>
+        </th>
         <td>
             <h2>{{polje[2][0]}}</h2>
         </td>
@@ -420,6 +558,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>3</h2>
+        </th>
         <td>
             <h2>{{polje[3][0]}}</h2>
         </td>
@@ -443,6 +584,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>4</h2>
+        </th>
         <td>
             <h2>{{polje[4][0]}}</h2>
         </td>
@@ -466,6 +610,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>5</h2>
+        </th>
         <td>
             <h2>{{polje[5][0]}}</h2>
         </td>
@@ -489,6 +636,9 @@
         </td>
     </tr>
     <tr>
+        <th>
+            <h2>6</h2>
+        </th>
         <td>
             <h2>{{polje[6][0]}}</h2>
         </td>

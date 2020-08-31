@@ -16,19 +16,23 @@
                   font-style: bold;
               }
 
-          table { border: solid 4px black;
-                  border-collapse: collapse;
+          table { border-collapse: collapse;
                   margin-left: auto;
                   margin-right: auto;
                   width: 50%;
             }
           
-          td {border: solid 2px black;
+          td {    border: solid 2px black;
                   border-collapse: collapse;
                   width: 30pt;
                   height: 30pt;
-                  background-color: lightblue;
+                  background-color: burlywood;
                 }
+              
+          th {    background-color: antiquewhite;
+                  width: 30pt;
+                  height: 30pt;
+            }
 
           .button {padding: 30px 30px;
                   font-size: 30px;
