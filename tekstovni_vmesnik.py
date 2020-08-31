@@ -41,7 +41,7 @@ def dolocitev_stopnje(vnos):
         napaka_pri_vnosu()
 
 def zahtevaj_potezo():
-    return input("Vnesi številki vrstice in stolpca, ločeni z vejico, pol pa še F alpa f isto ločen z vejico če hočš zastavco:")
+    return input("Poteza:")
 
 def urejen_vnos(vnos):
     return vnos.split(",")
